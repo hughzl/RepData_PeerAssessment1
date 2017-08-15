@@ -117,8 +117,8 @@ sum(is.na(activity$steps))
 ```
 ## [1] 2304
 ```
-### fill in missing values with mean for 5-minute interval
 ### Create a new dataset that is equal to the original dataset but with the missing data filled in
+My strategy is to fill in missing values with mean for 5-minute interval which is already calculated above. Because the mean value is the best to reflect typical activities for a given period.
 
 ```r
 activity_new<-activity

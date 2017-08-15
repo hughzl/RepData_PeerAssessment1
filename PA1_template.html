@@ -191,11 +191,9 @@ ggplot(data = averagesteps, mapping = aes(x=interval, y=average))+
 <pre class="r"><code>sum(is.na(activity$steps))</code></pre>
 <pre><code>## [1] 2304</code></pre>
 </div>
-<div id="fill-in-missing-values-with-mean-for-5-minute-interval" class="section level3">
-<h3>fill in missing values with mean for 5-minute interval</h3>
-</div>
 <div id="create-a-new-dataset-that-is-equal-to-the-original-dataset-but-with-the-missing-data-filled-in" class="section level3">
 <h3>Create a new dataset that is equal to the original dataset but with the missing data filled in</h3>
+<p>My strategy is to fill in missing values with mean for 5-minute interval which is already calculated above. Because the mean value is the best to reflect typical activities for a given period.</p>
 <pre class="r"><code>activity_new&lt;-activity
 activity_new$steps&lt;-ifelse(is.na(activity_new$steps), averagesteps$average, activity_new$steps)</code></pre>
 </div>
